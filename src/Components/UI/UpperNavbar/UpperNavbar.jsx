@@ -3,7 +3,7 @@ import { IoSearchOutline } from "react-icons/io5";
 
 const UpperNavbar = () => {
   return (
-    <header className="w-full bg-white/90 text-slate-600 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <header className="w-full bg-white/90 text-slate-600 backdrop-blur-md shadow-sm fixed top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-1.5 flex flex-col md:flex-row md:items-center justify-between gap-2 text-[10px] font-bold uppercase tracking-widest">
         {/* searchbar-toggler */}
         <div className="w-full flex items-center gap-2">

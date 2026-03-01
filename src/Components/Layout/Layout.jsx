@@ -10,8 +10,8 @@ const Layout = () => {
     <>
         <UpperNavbar />
         <Navbar/>
-        {/* <Outlet />
-        <StickyFooter />
+        <Outlet />
+        {/* <StickyFooter />
         <Footer /> */}
     </>
   )
