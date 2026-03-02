@@ -38,3 +38,9 @@
   animation: shimmerEffect 4s infinite linear;
   pointer-events: none;
 }
+
+.glass-nav{
+    background: rgba(253, 252, 248, 0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}

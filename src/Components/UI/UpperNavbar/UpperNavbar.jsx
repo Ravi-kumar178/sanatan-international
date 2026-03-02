@@ -1,6 +1,7 @@
 import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
 
+
 const UpperNavbar = () => {
   return (
     <header className="w-full bg-white/90 text-slate-600 backdrop-blur-md shadow-sm fixed top-0 z-50">
