@@ -11,8 +11,8 @@ const Layout = () => {
         <UpperNavbar />
         <Navbar/>
         <Outlet />
-        {/* <StickyFooter />
-        <Footer /> */}
+        {/* <StickyFooter /> */}
+        <Footer />
     </>
   )
 }
