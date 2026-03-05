@@ -16,30 +16,13 @@ const Collabration = () => {
               description="We partner with technology studios, educators, and community groups to deliver safer digital tools and stronger local support systems."
             />
 
-            <SectionBanner 
+            <SectionBanner
               img={img}
               alt="Collabration"
               label="Partnership model"
               heading="Shared goals. Shared accountability."
               description="Each partnership is aligned to measurable outcomes: safer elders, stronger youth education, and community resilience across borders."
             />
-            {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 reveal-item visible">
-              <CardWithBulletPoint
-                label={"What we publish"}
-                labelColor="text-slate-400"
-                color="bg-slate-50"
-                items={financialBulletPoints}
-              />
-
-              <Quote
-                label="Sanskrit Principle"
-                sanskrit="“सत्यं वद” — Taittiriya Upanishad 1.11"
-                description="Speak truth. Practice accountability."
-                className="bg-white border border-slate-100 rounded-4xl p-8"
-                sanskritClassName="mt-4"
-                descriptionClassName="mt-0"
-              />
-            </div> */}
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 reveal-item visible">
               <Card
@@ -47,23 +30,29 @@ const Collabration = () => {
                   "bg-[#FDFCF8] border border-slate-100 rounded-[2rem] p-6"
                 }
                 label={"Co-Design"}
-                description={"Programs are built with community input and validated through pilots."}
+                description={
+                  "Programs are built with community input and validated through pilots."
+                }
               />
               <Card
                 cardClassName={
                   "bg-[#FDFCF8] border border-slate-100 rounded-[2rem] p-6"
                 }
                 label={"Scale"}
-                description={"Successful pilots are rolled out across chapters with shared tooling."}
+                description={
+                  "Successful pilots are rolled out across chapters with shared tooling."
+                }
               />
               <Card
                 cardClassName={
                   "bg-[#FDFCF8] border border-slate-100 rounded-[2rem] p-6"
                 }
                 label={"Measure"}
-                description={"Impact metrics are tracked and published with each cycle."}
+                description={
+                  "Impact metrics are tracked and published with each cycle."
+                }
               />
-            </div> 
+            </div>
           </div>
         </div>
       </div>
