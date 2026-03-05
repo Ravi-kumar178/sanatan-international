@@ -10,4 +10,13 @@ const cardBulletPoints = [
   "No addictive tech. No engagement traps.",
   "Programs are structured, measurable, and safety-first.",
 ];
-export { aboutGridContent, cardBulletPoints };
+
+const missionBulletPoints = [
+  "Provide education and skill development based on Yoga, ethics, and consciousness studies",
+  "Promote well-being through preventive, lifestyle-oriented approaches",
+  "Research and document indigenous knowledge systems responsibly",
+  "Develop ethical technologies that protect and support people",
+  "Encourage sustainable living and indigenous production",
+  "Operate inclusively—open to all backgrounds",
+];
+export { aboutGridContent, cardBulletPoints, missionBulletPoints };

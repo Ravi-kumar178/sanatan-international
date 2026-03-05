@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import NavbarDropdown from "./NavbarComponents/NavbarDropdown";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navItems = [
@@ -139,7 +139,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* logo part */}
-        <div className="flex items-center gap-4 group cursor-pointer">
+        <Link to="/" className="flex items-center gap-4 group cursor-pointer">
           <div className="bg-white/80 w-11 h-11 rounded-2xl flex items-center justify-center shadow-lg border border-white/60 overflow-hidden">
             <img src={logo} alt="Logo" className="w-8 h-8 object-contain" />
           </div>
@@ -155,7 +155,7 @@ const Navbar = () => {
               INTERNATIONAL
             </span>
           </div>
-        </div>
+        </Link>
         {/* content part */}
         <ul className="hidden lg:flex items-center gap-8">
           {navItems.map((item, index) => (
