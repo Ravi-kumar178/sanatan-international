@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import NavbarDropdown from "./NavbarComponents/NavbarDropdown";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navItems = [
@@ -57,6 +57,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
+  const [isbackdropVisible, setIsBackdropVisible] = useState(true);
   const mobileMenuRef = useRef(null);
 
   useEffect(() => {
@@ -125,9 +126,16 @@ const Navbar = () => {
     };
   }, [isMobileMenuOpen]);
 
+  const location = useLocation().pathname;
+  useEffect(() => {
+    if (location !== "/") {
+      setIsBackdropVisible(false);
+    }
+  }, [location]);
+
   return (
     <header
-      className={`fixed top-15 md:top-9.5 w-full z-1000 transition-all duration-700 ${isScrolled ? "glass-nav py-3 shadow-lg backdrop-blur-md" : "bg-transparent py-6"} `}
+      className={`fixed top-15 md:top-9.5 w-full z-1000 transition-all duration-700 ${isbackdropVisible?(isScrolled ? "glass-nav py-3 shadow-lg backdrop-blur-md" : "bg-transparent py-6"):("bg-white/90 py-3 shadow-lg backdrop-blur-md")} `}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* logo part */}
@@ -137,12 +145,12 @@ const Navbar = () => {
           </div>
           <div className="flex flex-col">
             <span
-              className={`font-bold text-lg tracking-tighter leading-none font-ancient ${isScrolled ? "text-slate-900" : "text-white"}`}
+              className={`font-bold text-lg tracking-tighter leading-none font-ancient ${isbackdropVisible?(isScrolled ? "text-slate-900" : "text-white"):"text-slate-900"}`}
             >
               SANATAN
             </span>
             <span
-              className={`text-[8px] font-black tracking-[0.3em] uppercase ${isScrolled ? "text-orange-600" : "text-white/80"}`}
+              className={`text-[8px] font-black tracking-[0.3em] uppercase ${isbackdropVisible?(isScrolled ? "text-orange-600" : "text-white/80"):"text-orange-600"}`}
             >
               INTERNATIONAL
             </span>
@@ -155,7 +163,7 @@ const Navbar = () => {
               onMouseEnter={() => setActiveDropdown(index)}
               onMouseLeave={() => setActiveDropdown(null)}
               key={index}
-              className={`relative text-[10px] tracking-widest font-semibold cursor-pointer transition-colors duration-300 ${isScrolled ? "text-slate-600 hover:text-orange-500" : "text-white/90 hover:text-white"}`}
+              className={`relative text-[10px] tracking-widest font-semibold cursor-pointer transition-colors duration-300 ${isbackdropVisible?(isScrolled ? "text-slate-600 hover:text-orange-500" : "text-white/90 hover:text-white"):"text-slate-600 hover:text-orange-500"}`}
             >
               <span className="uppercase">{item?.name}</span>
               <IoIosArrowDown className="inline-block h-3 w-3 ml-1" />
@@ -164,11 +172,11 @@ const Navbar = () => {
             </li>
           ))}
           <li
-            className={`w-px h-6 mx-2  ${isScrolled ? "bg-slate-400" : "bg-white/30"}`}
+            className={`w-px h-6 mx-2  ${isbackdropVisible?(isScrolled ? "bg-slate-400" : "bg-white/30") : "bg-slate-400"}`}
           ></li>
           <button
             onClick={navigateToMarketplace}
-            className={`text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full border transition-all ${isScrolled ? "text-slate-600 border-slate-200 hover:text-orange-500 hover:border-orange-500" : "text-white border-white/40 hover:border-white"}`}
+            className={`text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full border transition-all ${isbackdropVisible?(isScrolled ? "text-slate-600 border-slate-200 hover:text-orange-500 hover:border-orange-500" : "text-white border-white/40 hover:border-white"):"text-slate-600 border-slate-200 hover:text-orange-500 hover:border-orange-500"}`}
           >
             Marketplace
           </button>
