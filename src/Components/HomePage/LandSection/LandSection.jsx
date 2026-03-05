@@ -39,7 +39,7 @@ const LandSection = () => {
               Donate to Land Fund
             </button>
             <button
-              onClick={() => navigate("/transparency")}
+              onClick={() => navigate("/financial-reports")}
               className="text-slate-500 font-black uppercase tracking-widest text-[10px] hover:text-slate-900 transition-all"
             >
               View Transparency

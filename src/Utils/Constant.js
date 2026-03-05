@@ -19,4 +19,17 @@ const missionBulletPoints = [
   "Encourage sustainable living and indigenous production",
   "Operate inclusively—open to all backgrounds",
 ];
-export { aboutGridContent, cardBulletPoints, missionBulletPoints };
+
+const financialBulletPoints = [
+  "Annual reports",
+  "Governance policies",
+  "Financial summaries (where applicable)",
+  "Program outcomes (without inflated claims)",
+];
+
+export {
+  aboutGridContent,
+  cardBulletPoints,
+  missionBulletPoints,
+  financialBulletPoints,
+};

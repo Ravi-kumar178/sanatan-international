@@ -6,6 +6,7 @@ const Quote = ({
   description = "",
   className = "",
   sanskritClassName = "",
+  descriptionClassName = "mt-3",
 }) => {
   return (
     <div className={className}>
@@ -15,7 +16,7 @@ const Quote = ({
       <p className={sanskritClassName}>
         {sanskrit}
       </p>
-      <p className="block mt-3 text-base text-slate-500 font-serif-elegant italic">
+      <p className={`block ${descriptionClassName} text-base text-slate-500 font-serif-elegant italic`}>
         {description}
       </p>
     </div>

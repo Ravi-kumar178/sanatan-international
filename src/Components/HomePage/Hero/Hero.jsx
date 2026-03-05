@@ -61,7 +61,7 @@ const Hero = () => {
             Explore Programs
           </button>
           <button
-            onClick={() => navigate("/transparency")}
+            onClick={() => navigate("/financial-reports")}
             className="cursor-pointer bg-white/10 border border-white/30 text-white px-8 py-3 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white/20 transition-all"
           >
             View Transparency
