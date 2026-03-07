@@ -77,9 +77,11 @@ const Navbar = () => {
   const navigate = useNavigate();
   const navigateToMarketplace = () => {
     navigate("/marketplace");
+    window.scrollTo(0, 0);
   };
   const navigateToDonate = () => {
     navigate("/donate");
+    window.scrollTo(0, 0);
   };
 
   const toggleMobileMenu = () => {
